@@ -16,7 +16,7 @@ export default function Profile() {
       id="profile"
       index="01 · Profile"
       title="A computer scientist working on applied systems."
-      lede="Alongside my degree I worked remotely for international companies in the US, China, the UK, and Germany, four years that taught me how to own a task end to end."
+      lede="Alongside my degree I worked remotely for international companies in the US, China, the UK, and Germany, work that taught me to take full ownership of a task."
     >
       <div className="grid gap-10 md:grid-cols-12">
         <Reveal className="md:col-span-7">

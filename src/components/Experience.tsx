@@ -7,7 +7,7 @@ export default function Experience() {
     <Section
       id="experience"
       index="04 · Experience"
-      title="Four years of remote international work."
+      title="Remote experience across international teams."
       lede="All four roles were remote, across four countries, alongside and after my degree."
     >
       <ol className="relative ml-1 border-l border-line pl-8 md:pl-12">

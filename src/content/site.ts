@@ -87,7 +87,7 @@ export const research: ResearchLine[] = [
   {
     title: "Precise nutritional modelling",
     state: "direction",
-    body: "A direction for graduate study: integrate feed composition, animal performance, and rumen microflora data into predictive models that give practical feeding guidance. No results yet; the modelling comes first.",
+    body: "A proposed direction for graduate study, and the focus of my nutrition-track applications: integrate feed composition, animal performance, and rumen microflora data into predictive models that give practical feeding guidance. No results yet; the modelling comes first.",
   },
 ];
 

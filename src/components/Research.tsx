@@ -8,7 +8,7 @@ export default function Research() {
       id="research"
       index="02 · Research"
       title="Applied research, kept honest."
-      lede="My research direction is simple: turn data into tools that help people decide. Two lines of work are built; the third is where graduate study begins."
+      lede="My research direction is applied: turn data into tools that help people decide. Two lines of work are built; the third is a proposed direction for graduate study."
     >
       <ol className="border-t border-line">
         {research.map((line, i) => (
@@ -27,7 +27,7 @@ export default function Research() {
                       line.state === "built" ? "text-accent" : "text-muted"
                     }`}
                   >
-                    {line.state === "built" ? "Built" : "Direction for graduate study"}
+                    {line.state === "built" ? "Built" : "Proposed direction"}
                   </span>
                 </div>
                 <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-ink-soft">
