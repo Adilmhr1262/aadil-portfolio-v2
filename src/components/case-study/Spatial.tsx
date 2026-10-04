@@ -38,8 +38,8 @@ export default function Spatial() {
         </ol>
       </Figure>
 
-      <CaseImage no="08" figure={floodFigures.gisRiskMap} className="mt-10" />
-      <CaseImage no="09" figure={floodFigures.gisFramework} className="mt-8" />
+      <CaseImage no="08" figure={floodFigures.gisRiskMap} bleed className="mt-10" />
+      <CaseImage no="09" figure={floodFigures.gisFramework} scrollX className="mt-8" />
     </div>
   );
 }

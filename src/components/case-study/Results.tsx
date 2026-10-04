@@ -56,11 +56,16 @@ function CountUp({
 export default function Results() {
   return (
     <div className="mt-10">
-      <div className="grid grid-cols-1 gap-10 border-t border-line pt-10 md:grid-cols-2 md:gap-8">
+      <Reveal>
+        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
+          Fig. 04 · Held-out evaluation metrics
+        </p>
+      </Reveal>
+      <div className="grid grid-cols-1 gap-10 pt-6 md:grid-cols-2 md:gap-8">
         {floodDss.results.primary.map((metric, i) => (
           <Reveal key={metric.label} delay={i * 120}>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
-              Fig. 04 · {metric.label}
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+              {metric.label}
             </p>
             <p className="mt-3 font-display text-7xl font-medium tracking-tight text-ink md:text-8xl">
               <CountUp end={metric.value} decimals={metric.decimals} />
@@ -90,7 +95,7 @@ export default function Results() {
         </dl>
       </Reveal>
 
-      <CaseImage no="05" figure={floodFigures.modelComparison} className="mt-12" />
+      <CaseImage no="05" figure={floodFigures.modelComparison} bleed className="mt-12" />
 
       <Reveal delay={160}>
         <p className="mt-10 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-ink-soft">

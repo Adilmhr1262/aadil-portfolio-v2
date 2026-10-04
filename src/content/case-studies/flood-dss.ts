@@ -77,7 +77,7 @@ export const floodFigures = {
     900,
     "Authority dashboard overview for Sindh: stat cards for active flood alerts, high-risk areas, total historical events, and current risk status; a monthly rainfall trends chart; a flood frequency bar chart; a risk distribution donut; and a recent alerts list.",
     "The authority's home view: alert counts, rainfall trends, risk distribution, and recent warnings for Sindh.",
-    "Live overview"
+    "Step 1 · Live overview"
   ),
   decisionSupport: fig(
     "decision-support.webp",
@@ -85,7 +85,7 @@ export const floodFigures = {
     900,
     "Decision Support view: a high-risk districts table with probabilities, risk levels, model versions, top factors, and recommended actions; active alerts; a latest predictions table; a resource overview of shelters and facilities; and vulnerability hotspots.",
     "High-risk districts with probabilities, contributing factors, and recommended actions.",
-    "Risk explanation"
+    "Step 2 · Risk explanation"
   ),
   alertCenter: fig(
     "alert-center.webp",
@@ -93,7 +93,7 @@ export const floodFigures = {
     900,
     "Alert Center view: a form for issuing a new public alert by district, severity, title, and message; a citizen report triage queue; and an alert history table with severity and timestamps.",
     "Issuing public warnings and triaging community reports.",
-    "Warning workflow"
+    "Step 3 · Warning workflow"
   ),
   mobileHome: fig(
     "mobile-home.webp",

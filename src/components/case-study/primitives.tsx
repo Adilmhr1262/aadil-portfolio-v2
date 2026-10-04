@@ -37,15 +37,17 @@ export function Figure({
   meta,
   children,
   className = "",
+  bleed = false,
 }: {
   no: string;
   caption: string;
   meta?: string;
   children: ReactNode;
   className?: string;
+  bleed?: boolean;
 }) {
   return (
-    <Reveal className={className}>
+    <Reveal className={`${bleed ? "lg:-mx-16 xl:-mx-24" : ""} ${className}`}>
       <figure className="border border-line bg-paper-deep/40">
         {children}
         <figcaption className="flex items-center justify-between gap-4 border-t border-line px-4 py-3 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
@@ -64,22 +66,33 @@ export function CaseImage({
   no,
   figure,
   className = "",
+  bleed = false,
+  scrollX = false,
 }: {
   no: string;
   figure: CaseFigure;
   className?: string;
+  bleed?: boolean;
+  scrollX?: boolean;
 }) {
   return (
-    <Figure no={no} caption={figure.caption} meta={figure.meta} className={className}>
+    <Figure no={no} caption={figure.caption} meta={figure.meta} className={className} bleed={bleed}>
       <div className="bg-paper p-3 md:p-5">
-        <Image
-          src={figure.src}
-          width={figure.width}
-          height={figure.height}
-          alt={figure.alt}
-          sizes="(max-width: 768px) 100vw, 1100px"
-          className="h-auto w-full border border-line"
-        />
+        <div className={scrollX ? "overflow-x-auto" : ""}>
+          <Image
+            src={figure.src}
+            width={figure.width}
+            height={figure.height}
+            alt={figure.alt}
+            sizes={bleed ? "(max-width: 768px) 100vw, 1400px" : "(max-width: 768px) 100vw, 1100px"}
+            className={`h-auto w-full border border-line ${scrollX ? "min-w-[640px] md:min-w-0" : ""}`}
+          />
+        </div>
+        {scrollX && (
+          <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.14em] text-muted md:hidden">
+            Scroll sideways to inspect
+          </p>
+        )}
       </div>
     </Figure>
   );
