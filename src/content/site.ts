@@ -30,6 +30,7 @@ export type Project = {
   status: "complete" | "in-progress";
   stack: string;
   summary: string;
+  href?: string;
 };
 
 export const projects: Project[] = [
@@ -38,6 +39,7 @@ export const projects: Project[] = [
     year: "2026",
     status: "complete",
     stack: "Python · FastAPI · PostgreSQL / PostGIS · Flutter",
+    href: "/work/flood-dss",
     summary:
       "End-to-end decision-support system for flood-prone districts in Sindh: spatial database of 12 districts and 52 historical flood events, three trained machine-learning models (best held-out F1 0.875, ROC-AUC 0.963), and interfaces for authorities, volunteers, and the public.",
   },
