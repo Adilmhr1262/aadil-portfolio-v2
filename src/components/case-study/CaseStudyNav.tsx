@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-const links = [
+const defaultLinks = [
   { label: "Context", href: "#context" },
   { label: "Approach", href: "#approach" },
   { label: "Architecture", href: "#architecture" },
@@ -14,7 +14,7 @@ const links = [
   { label: "Technology", href: "#technology" },
 ];
 
-export function CaseStudyTopBar() {
+export function CaseStudyTopBar({ no = "No. 1" }: { no?: string }) {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
@@ -25,14 +25,18 @@ export function CaseStudyTopBar() {
           ← Aadil Ali Mahar
         </Link>
         <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-          Case study · No. 1
+          Case study · {no}
         </span>
       </div>
     </header>
   );
 }
 
-export function CaseStudyNav() {
+export function CaseStudyNav({
+  links = defaultLinks,
+}: {
+  links?: { label: string; href: string }[];
+}) {
   const [progress, setProgress] = useState(0);
   const [active, setActive] = useState("");
 
@@ -52,7 +56,7 @@ export function CaseStudyNav() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [links]);
 
   return (
     <div className="sticky top-16 z-40 border-b border-line bg-paper/90 backdrop-blur-md">

@@ -31,6 +31,7 @@ export type Project = {
   stack: string;
   summary: string;
   href?: string;
+  kind?: string;
 };
 
 export const projects: Project[] = [
@@ -45,11 +46,13 @@ export const projects: Project[] = [
   },
   {
     title: "PALMS: Personalized Adaptive Learning Management System",
-    year: "2025",
+    year: "2026",
     status: "complete",
+    kind: "Independent education-technology project",
     stack: "Next.js · TypeScript · FastAPI · PostgreSQL",
+    href: "/work/palms",
     summary:
-      "Learning platform with adaptive mastery tracking: auto-graded MCQ and true/false assessments, teacher-graded short answers, and one active recommendation per student, topic, and rule. Backend test suite: 84 of 84 passing.",
+      "An education research platform built around transparent mastery and recommendation rules: five explicit rules with stored plain-language reasons, teacher intervention workflows, and pre/post research sessions. Backend test suite: 84 of 84 passing.",
   },
   {
     title: "Health and Care",

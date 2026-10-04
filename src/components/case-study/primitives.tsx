@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Reveal from "../Reveal";
-import type { CaseFigure } from "@/content/case-studies/flood-dss";
+import type { CaseFigure } from "./types";
 
 /** Mono kicker + serif title block shared by case-study sections. */
 export function SectionHeading({

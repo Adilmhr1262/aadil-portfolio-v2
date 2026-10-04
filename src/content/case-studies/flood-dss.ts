@@ -28,14 +28,9 @@ export type TechGroup = { label: string; text: string };
 
 export type MethodStage = { title: string; text: string };
 
-export type CaseFigure = {
-  src: string;
-  width: number;
-  height: number;
-  alt: string;
-  caption: string;
-  meta?: string;
-};
+import type { CaseFigure } from "@/components/case-study/types";
+
+export type { CaseFigure };
 
 const fig = (file: string, width: number, height: number, alt: string, caption: string, meta?: string): CaseFigure => ({
   src: `/case-studies/flood-dss/${file}`,

@@ -8,7 +8,7 @@ export default function Work() {
       id="work"
       index="03 · Selected work"
       title="Systems designed and built end to end."
-      lede="Each project below is real, with the stack and the outcome stated plainly. The Flood Risk DSS now has a full case study; the remaining project pages follow the same format."
+      lede="Each project below is real, with the stack and the outcome stated plainly. The Flood Risk DSS and PALMS now have full case studies; the remaining project pages follow the same format."
     >
       <div className="border-t border-line">
         {projects.map((project, i) => (
@@ -24,6 +24,11 @@ export default function Work() {
                 <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
                   {project.stack}
                 </p>
+                {project.kind && (
+                  <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.14em] text-accent">
+                    {project.kind}
+                  </p>
+                )}
                 <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-soft">
                   {project.summary}
                 </p>
