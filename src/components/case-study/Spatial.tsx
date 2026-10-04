@@ -1,6 +1,6 @@
 import Reveal from "../Reveal";
-import { AssetPlaceholder, Figure } from "./primitives";
-import { floodDss } from "@/content/case-studies/flood-dss";
+import { CaseImage, Figure } from "./primitives";
+import { floodDss, floodFigures } from "@/content/case-studies/flood-dss";
 
 export default function Spatial() {
   return (
@@ -14,7 +14,7 @@ export default function Spatial() {
       ))}
 
       <Figure
-        no="06"
+        no="07"
         caption="From districts to decisions"
         meta="Conceptual"
         className="mt-10"
@@ -38,15 +38,8 @@ export default function Spatial() {
         </ol>
       </Figure>
 
-      <Reveal className="mt-8">
-        <AssetPlaceholder
-          label="Project map · asset to be added"
-          sub="District-level risk map from the PostGIS spatial database. No map is shown until the project's own rendered output is available."
-        />
-        <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-          Fig. 07 · District risk map · Placeholder
-        </p>
-      </Reveal>
+      <CaseImage no="08" figure={floodFigures.gisRiskMap} className="mt-10" />
+      <CaseImage no="09" figure={floodFigures.gisFramework} className="mt-8" />
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function Methodology() {
     <div className="mt-10 border border-line bg-paper-deep/40 px-5 py-8 md:px-10 md:py-10">
       <Reveal>
         <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-          Fig. 05 · Methodology · Conceptual overview
+          Fig. 06 · Methodology · Conceptual overview
         </p>
       </Reveal>
       <ol className="mt-6 divide-y divide-line">

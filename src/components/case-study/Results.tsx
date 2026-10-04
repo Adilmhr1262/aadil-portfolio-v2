@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Reveal from "../Reveal";
-import { floodDss } from "@/content/case-studies/flood-dss";
+import { CaseImage } from "./primitives";
+import { floodDss, floodFigures } from "@/content/case-studies/flood-dss";
 
 function CountUp({
   end,
@@ -88,6 +89,8 @@ export default function Results() {
           ))}
         </dl>
       </Reveal>
+
+      <CaseImage no="05" figure={floodFigures.modelComparison} className="mt-12" />
 
       <Reveal delay={160}>
         <p className="mt-10 max-w-2xl border-l-2 border-accent pl-4 text-sm leading-relaxed text-ink-soft">

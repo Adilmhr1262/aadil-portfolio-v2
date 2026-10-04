@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Reveal from "../Reveal";
+import type { CaseFigure } from "@/content/case-studies/flood-dss";
 
 /** Mono kicker + serif title block shared by case-study sections. */
 export function SectionHeading({
@@ -54,6 +56,32 @@ export function Figure({
         </figcaption>
       </figure>
     </Reveal>
+  );
+}
+
+/** A genuine project artifact, framed as an academic figure. */
+export function CaseImage({
+  no,
+  figure,
+  className = "",
+}: {
+  no: string;
+  figure: CaseFigure;
+  className?: string;
+}) {
+  return (
+    <Figure no={no} caption={figure.caption} meta={figure.meta} className={className}>
+      <div className="bg-paper p-3 md:p-5">
+        <Image
+          src={figure.src}
+          width={figure.width}
+          height={figure.height}
+          alt={figure.alt}
+          sizes="(max-width: 768px) 100vw, 1100px"
+          className="h-auto w-full border border-line"
+        />
+      </div>
+    </Figure>
   );
 }
 

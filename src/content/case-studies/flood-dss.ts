@@ -28,6 +28,91 @@ export type TechGroup = { label: string; text: string };
 
 export type MethodStage = { title: string; text: string };
 
+export type CaseFigure = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  caption: string;
+  meta?: string;
+};
+
+const fig = (file: string, width: number, height: number, alt: string, caption: string, meta?: string): CaseFigure => ({
+  src: `/case-studies/flood-dss/${file}`,
+  width,
+  height,
+  alt,
+  caption,
+  meta,
+});
+
+export const floodFigures = {
+  modelComparison: fig(
+    "model-comparison.webp",
+    2200,
+    945,
+    "Bar chart comparing test-set accuracy, recall, F1, and ROC-AUC for Random Forest, XGBoost, and MLP on a held-out set of 36 district-years, with a second panel showing 5-fold cross-validation F1 and standard-deviation bars. The MLP leads on F1 at 0.875 and ROC-AUC at 0.963.",
+    "Test-set metrics and 5-fold cross-validation F1 for the three compared models. The MLP (mlp-v1) was selected.",
+    "n = 36 district-years"
+  ),
+  gisRiskMap: fig(
+    "gis-risk-map.webp",
+    1440,
+    900,
+    "The project's GIS Flood Risk Map view: toggle chips for the risk, historical flood, vulnerability, infrastructure, and district-boundary layers, a district search field, and a Leaflet map with low, medium, and high risk markers and a risk-level legend.",
+    "The project's interactive risk map: layer toggles, district search, and risk-level markers.",
+    "Leaflet"
+  ),
+  gisFramework: fig(
+    "gis-framework.webp",
+    2200,
+    1184,
+    "Project diagram of the GIS framework: five spatial layers (risk, historical floods, vulnerability, infrastructure, district boundaries) feeding a PostGIS database served as GeoJSON through FastAPI endpoints to the decision-support views, Leaflet dashboard, alert center, and mobile map.",
+    "How spatial layers move from PostGIS through the API to the decision-support views and map clients.",
+    "Project diagram"
+  ),
+  dashboardOverview: fig(
+    "dashboard-overview.webp",
+    1440,
+    900,
+    "Authority dashboard overview for Sindh: stat cards for active flood alerts, high-risk areas, total historical events, and current risk status; a monthly rainfall trends chart; a flood frequency bar chart; a risk distribution donut; and a recent alerts list.",
+    "The authority's home view: alert counts, rainfall trends, risk distribution, and recent warnings for Sindh.",
+    "Live overview"
+  ),
+  decisionSupport: fig(
+    "decision-support.webp",
+    1440,
+    900,
+    "Decision Support view: a high-risk districts table with probabilities, risk levels, model versions, top factors, and recommended actions; active alerts; a latest predictions table; a resource overview of shelters and facilities; and vulnerability hotspots.",
+    "High-risk districts with probabilities, contributing factors, and recommended actions.",
+    "Risk explanation"
+  ),
+  alertCenter: fig(
+    "alert-center.webp",
+    1440,
+    900,
+    "Alert Center view: a form for issuing a new public alert by district, severity, title, and message; a citizen report triage queue; and an alert history table with severity and timestamps.",
+    "Issuing public warnings and triaging community reports.",
+    "Warning workflow"
+  ),
+  mobileHome: fig(
+    "mobile-home.webp",
+    390,
+    844,
+    "Mobile application prototype mockup in a phone frame: home screen showing current flood risk for Badin District at 62 percent medium, active alerts for Dadu and Badin, and bottom navigation for Home, Risk Check, Emergency, and Alerts.",
+    "Prototype mockup: current district risk and active alerts on the home screen.",
+    "Home"
+  ),
+  mobileScreens: fig(
+    "mobile-screens.webp",
+    390,
+    844,
+    "Two mobile application prototype mockups in phone frames: a risk-check screen for assessing any district, and an emergency screen listing rescue contacts with call buttons and nearby emergency shelters.",
+    "Prototype mockups: district risk check, and emergency contacts with shelters.",
+    "Risk check · Emergency"
+  ),
+};
+
 export const floodDss = {
   slug: "flood-dss",
   folio: "Case study · No. 1",
@@ -216,8 +301,8 @@ export const floodDss = {
       title: "Flutter mobile application",
       role: "For the field",
       paragraphs: [
-        "Risk information that travels. The mobile app carries alerts and volunteer coordination into the field, where decisions happen away from a desk.",
-        "Built with Flutter, on the same backend and role-based access as the dashboard and portal.",
+        "Risk information that travels. The mobile designs carry alerts and volunteer coordination into the field, where decisions happen away from a desk.",
+        "The screens exist as prototype mockups, designed around the same backend and role-based access as the dashboard and portal.",
       ],
       placeholder: "MOBILE APP · INTERFACE CAPTURE TO BE ADDED",
     },
