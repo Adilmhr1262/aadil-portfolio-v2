@@ -106,15 +106,15 @@ export const experience: ExperienceItem[] = [
     location: "Germany · remote",
     dates: "Feb 2025 – Sep 2026",
     summary:
-      "Full-cycle remote recruitment across engineering, trading, and operations roles; team time-tracking and payroll coordination.",
+      "Coordinated end-to-end remote recruitment for engineering, trading, and operations roles, alongside team time-tracking and payroll coordination.",
   },
   {
     role: "Customer Service Representative",
-    company: "LIBT Admission centre",
+    company: "LIBT Admission Centre",
     location: "UK · remote",
     dates: "Apr 2025 – Sep 2025",
     summary:
-      "Guided 100+ students through the UK university admission journey: course selection, document review, timelines, and follow-ups.",
+      "Guided over 100 students through UK university admissions, including course selection, document review, application timelines, and follow-ups.",
   },
   {
     role: "Data Scientist",
@@ -122,7 +122,7 @@ export const experience: ExperienceItem[] = [
     location: "China · remote",
     dates: "Oct 2024 – Mar 2025",
     summary:
-      "Web data collection, cleaning pipelines in Python, exploratory analysis, and analytical reports, with ownership from collection to reporting.",
+      "Managed web data collection, Python-based data cleaning, exploratory analysis, and analytical reporting, with responsibility across the data workflow.",
   },
   {
     role: "Travel Agent",
@@ -130,6 +130,6 @@ export const experience: ExperienceItem[] = [
     location: "US · remote",
     dates: "Feb 2024 – Jul 2024",
     summary:
-      "Custom itineraries (routes, bookings, schedules) and client queries in fluent English.",
+      "Prepared customized travel itineraries, coordinated routes and bookings, and handled client inquiries in fluent English.",
   },
 ];
