@@ -4,7 +4,11 @@ import { useEffect, useRef, useState } from "react";
 
 /**
  * One-time count-up, firing when the element first scrolls into view.
- * Respects prefers-reduced-motion by rendering the final value directly.
+ *
+ * The true value is always the rendered and accessible text: server HTML,
+ * crawlers, reduced-motion users, and no-JS clients all see it. The
+ * count-up only ever replaces it transiently while the animation runs,
+ * then settles back on the true value.
  */
 export default function CountUp({
   to,
@@ -16,14 +20,10 @@ export default function CountUp({
   duration?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const [value, setValue] = useState(() =>
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      ? to
-      : 0
-  );
+  const [override, setOverride] = useState<string | null>(null);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const el = ref.current;
     if (!el) return;
     let raf = 0;
@@ -37,8 +37,12 @@ export default function CountUp({
         const tick = (t: number) => {
           const p = Math.min((t - t0) / duration, 1);
           const eased = 1 - Math.pow(1 - p, 3);
-          setValue(to * eased);
-          if (p < 1) raf = requestAnimationFrame(tick);
+          if (p < 1) {
+            setOverride((to * eased).toFixed(decimals));
+            raf = requestAnimationFrame(tick);
+          } else {
+            setOverride(null);
+          }
         };
         raf = requestAnimationFrame(tick);
       },
@@ -49,7 +53,7 @@ export default function CountUp({
       io.disconnect();
       cancelAnimationFrame(raf);
     };
-  }, [to, duration]);
+  }, [to, decimals, duration]);
 
-  return <span ref={ref}>{value.toFixed(decimals)}</span>;
+  return <span ref={ref}>{override ?? to.toFixed(decimals)}</span>;
 }

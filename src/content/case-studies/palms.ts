@@ -231,7 +231,7 @@ export const palms = {
   rulesSection: {
     title: "Five rules, stated exactly.",
     intro:
-      "The complete adaptive behavior of PALMS is the five rules below, evaluated in fixed priority order after every graded attempt. Each rule's title, message, and reason are stored verbatim on the recommendation row, which is what makes every recommendation auditable after the fact.",
+      "The complete adaptive behavior of PALMS is the five rules below. After every graded attempt, the system evaluates them in fixed priority order and creates a recommendation wherever the relevant condition applies; a rule whose condition does not apply creates nothing. Each rule's title, message, and reason are stored verbatim on the recommendation row, which is what makes every recommendation auditable after the fact.",
     contrast:
       "No machine-learning model sits between the learner's activity and the recommendation. The adaptive behavior is implemented through five explicit rules.",
   },
