@@ -96,6 +96,11 @@ export const palms = {
   metadata: [
     { label: "Project type", value: "Independent education-technology project" },
     {
+      label: "Contribution",
+      value:
+        "Conceived and specified the platform; directed its development through an iterative, AI-assisted workflow with step-by-step review and approval.",
+    },
+    {
       label: "Focus",
       value: "Mastery-based learning · Explainable recommendation · Education research",
     },
@@ -240,6 +245,7 @@ export const palms = {
     title: "Design before implementation.",
     paragraphs: [
       "Nine annotated wireframes document the intended interaction structure before the final interface was built: recommendations as bordered rows with reason-code badges, assessments as one question per view, grading as a queue. The built interface follows them closely.",
+      "Implementation was completed with AI-assisted development tools; technical behavior and project evidence were reviewed against the working codebase.",
     ],
   },
 
@@ -260,7 +266,7 @@ export const palms = {
       "Research score changes are measured values, not causal claims about learning.",
       "The login rate limiter is in-memory per process; a multi-instance deployment would need shared storage.",
       "There is no token revocation list; deactivation is checked per request, but existing tokens remain valid until their two-hour expiry.",
-      "Deployment is documented with Docker Compose; no production deployment is claimed.",
+      "Deployment is documented with Docker Compose for local setup; no production deployment is claimed.",
     ],
   },
 
