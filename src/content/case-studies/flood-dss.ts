@@ -31,14 +31,14 @@ export type MethodStage = { title: string; text: string };
 export const floodDss = {
   slug: "flood-dss",
   folio: "Case study · No. 1",
-  contextLine: "Final-year project",
+  contextLine: "Selected academic project",
   title: "Flood Risk Prediction and Early Warning Decision Support System",
   summary:
     "A complete decision-support system for flood-prone districts in Sindh, Pakistan. It combines predictive modelling, geospatial analysis, and role-based interfaces so that risk information can reach the people who need to act on it: authorities, volunteers, and the public.",
   meta: [
     { label: "Role", value: "Design and build" },
     { label: "Institution", value: "The Islamia University of Bahawalpur" },
-    { label: "Project type", value: "Final-year project" },
+    { label: "Project type", value: "Selected academic project" },
     { label: "Stack", value: "Python · PostGIS · FastAPI · Flutter" },
     { label: "Key result", value: "F1 0.875 · ROC-AUC 0.963 on held-out data" },
   ] as MetaRow[],
