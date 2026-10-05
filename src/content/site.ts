@@ -58,7 +58,9 @@ export const projects: Project[] = [
     title: "Health and Care",
     year: "2025",
     status: "complete",
+    kind: "Final-year project (Grade A)",
     stack: "Kotlin · Firebase · Google Maps",
+    href: "/work/health-and-care",
     summary:
       "Final-year project (Grade A): proposed Android ambulance application with booking, one-tap SOS, live tracking, driver communication, booking history, and admin management.",
   },
