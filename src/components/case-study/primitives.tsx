@@ -61,23 +61,28 @@ export function Figure({
   );
 }
 
-/** A genuine project artifact, framed as an academic figure. */
+/** A genuine project artifact, framed as an academic figure.
+ *  tone="ink" renders the artifact on a deliberate dark plate for
+ *  source diagrams whose original dark treatment must be preserved. */
 export function CaseImage({
   no,
   figure,
   className = "",
   bleed = false,
   scrollX = false,
+  tone = "paper",
 }: {
   no: string;
   figure: CaseFigure;
   className?: string;
   bleed?: boolean;
   scrollX?: boolean;
+  tone?: "paper" | "ink";
 }) {
+  const dark = tone === "ink";
   return (
     <Figure no={no} caption={figure.caption} meta={figure.meta} className={className} bleed={bleed}>
-      <div className="bg-paper p-3 md:p-5">
+      <div className={dark ? "bg-ink p-3 md:p-6" : "bg-paper p-3 md:p-5"}>
         <div className={scrollX ? "overflow-x-auto" : ""}>
           <Image
             src={figure.src}
@@ -85,11 +90,11 @@ export function CaseImage({
             height={figure.height}
             alt={figure.alt}
             sizes={bleed ? "(max-width: 768px) 100vw, 1400px" : "(max-width: 768px) 100vw, 1100px"}
-            className={`h-auto w-full border border-line ${scrollX ? "min-w-[640px] md:min-w-0" : ""}`}
+            className={`h-auto w-full ${dark ? "border border-white/15" : "border border-line"} ${scrollX ? "min-w-[640px] md:min-w-0" : ""}`}
           />
         </div>
         {scrollX && (
-          <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.14em] text-muted md:hidden">
+          <p className={`mt-2 font-mono text-[10px] uppercase tracking-[0.14em] ${dark ? "text-white/50" : "text-muted"} md:hidden`}>
             Scroll sideways to inspect
           </p>
         )}

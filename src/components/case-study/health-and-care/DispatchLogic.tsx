@@ -16,7 +16,7 @@ export default function DispatchLogic() {
     >
       <div className="grid gap-8 md:grid-cols-12">
         <div className="md:col-span-7">
-          <CaseImage no="04" figure={healthCareFigures[3]} />
+          <CaseImage no="04" figure={healthCareFigures[3]} tone="ink" />
         </div>
         <div className="md:col-span-5">
           {healthCare.dispatch.paragraphs.map((p, i) => (

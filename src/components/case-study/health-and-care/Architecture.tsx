@@ -25,7 +25,7 @@ export default function Architecture() {
           ))}
         </div>
         <div className="md:col-span-7">
-          <CaseImage no="03" figure={healthCareFigures[2]} />
+          <CaseImage no="03" figure={healthCareFigures[2]} tone="ink" />
         </div>
       </div>
     </Section>

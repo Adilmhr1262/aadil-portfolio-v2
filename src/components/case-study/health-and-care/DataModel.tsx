@@ -23,10 +23,10 @@ export default function DataModel() {
       </div>
       <div className="grid gap-8 md:grid-cols-12">
         <div className="md:col-span-6">
-          <CaseImage no="06" figure={healthCareFigures[5]} />
+          <CaseImage no="06" figure={healthCareFigures[5]} tone="ink" />
         </div>
         <div className="md:col-span-6">
-          <CaseImage no="07" figure={healthCareFigures[6]} />
+          <CaseImage no="07" figure={healthCareFigures[6]} tone="ink" />
         </div>
       </div>
     </Section>

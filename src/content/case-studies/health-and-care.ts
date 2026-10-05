@@ -210,7 +210,7 @@ export const healthCareFigures: CaseFigure[] = [
     meta: "System design",
   },
   {
-    src: "/case-studies/health-and-care/architecture.webp",
+    src: "/case-studies/health-and-care/architecture-dark.webp",
     width: 568,
     height: 435,
     alt: "Architecture diagram showing the Android app using Firebase Auth, which stores user data in Firestore DB; an AWS Cloud layer synchronizing data; and the Google Maps API providing location services.",
@@ -219,7 +219,7 @@ export const healthCareFigures: CaseFigure[] = [
     meta: "As documented — see note",
   },
   {
-    src: "/case-studies/health-and-care/dispatch-flow.webp",
+    src: "/case-studies/health-and-care/dispatch-dark.webp",
     width: 576,
     height: 650,
     alt: "Flowchart of the documented dispatch logic: user logs in, emergency button triggers immediate dispatch, the nearest driver is notified; parallel boxes list request ambulance, nearest-driver assignment, real-time tracking, confirmation, completion.",
@@ -237,7 +237,7 @@ export const healthCareFigures: CaseFigure[] = [
     meta: "SRS",
   },
   {
-    src: "/case-studies/health-and-care/er-diagram.webp",
+    src: "/case-studies/health-and-care/er-dark.webp",
     width: 341,
     height: 271,
     alt: "Entity-relationship diagram: USER has BOOKING, DRIVER is assigned_to BOOKING.",
@@ -245,7 +245,7 @@ export const healthCareFigures: CaseFigure[] = [
     meta: "System design",
   },
   {
-    src: "/case-studies/health-and-care/er-payment.webp",
+    src: "/case-studies/health-and-care/er-payment-dark.webp",
     width: 466,
     height: 361,
     alt: "Entity-relationship diagram variant: User books Booking; AmbulanceDriver serves Payment.",
