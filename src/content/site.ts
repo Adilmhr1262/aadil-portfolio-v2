@@ -68,7 +68,9 @@ export const projects: Project[] = [
     title: "Personal Nutrition and Calorie Tracking System",
     year: "2025",
     status: "complete",
+    kind: "Independent project",
     stack: "React · Python Flask · SQLite · Nutritionix API",
+    href: "/work/nutrition",
     summary:
       "Photo-based food tracking: capture or upload a meal photo to identify items and estimate calories, protein, carbohydrates, and fats, with dashboards, goals, and daily reports.",
   },
