@@ -31,7 +31,7 @@ export default function SystemFlow() {
         ))}
       </ol>
       <div className="mt-10">
-        <CaseImage no="02" figure={healthCareFigures[1]} scrollX />
+        <CaseImage no="01" figure={healthCareFigures[1]} scrollX />
       </div>
     </Section>
   );

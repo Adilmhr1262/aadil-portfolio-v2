@@ -39,7 +39,7 @@ export default function Interaction() {
           </Reveal>
         </div>
         <div className="md:col-span-8">
-          <CaseImage no="01" figure={healthCareFigures[0]} />
+          <CaseImage no="02" figure={healthCareFigures[0]} />
         </div>
       </div>
     </Section>
