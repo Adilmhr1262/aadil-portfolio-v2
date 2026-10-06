@@ -25,7 +25,7 @@ export default function Technology() {
       <Reveal>
         <p className="mt-8 font-mono text-xs uppercase tracking-[0.14em] text-muted">
           Only technologies verified in the project record are listed. Anything
-          further is a placeholder until confirmed.
+          further is omitted until confirmed.
         </p>
       </Reveal>
     </div>

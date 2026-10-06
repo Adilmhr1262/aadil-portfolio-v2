@@ -23,9 +23,29 @@ export default function Contact() {
         </a>
       </Reveal>
       <Reveal delay={120}>
-        <p className="mt-8 font-mono text-xs uppercase tracking-[0.14em] text-paper/50">
-          Placeholder: GitHub, LinkedIn, and CV download links to be added.
-        </p>
+        <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+          <a
+            href="https://github.com/Adilmhr1262"
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-baseline gap-3 font-mono text-xs uppercase tracking-[0.14em] text-paper/70 transition-colors hover:text-accent"
+          >
+            GitHub — Adilmhr1262
+            <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </a>
+          <a
+            href="/Aadil-Ali-Mahar-CV.pdf"
+            download="Aadil-Ali-Mahar-CV.pdf"
+            className="group inline-flex items-baseline gap-3 font-mono text-xs uppercase tracking-[0.14em] text-paper/70 transition-colors hover:text-accent"
+          >
+            Download CV
+            <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </a>
+        </div>
       </Reveal>
     </Section>
   );

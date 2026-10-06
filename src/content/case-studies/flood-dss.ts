@@ -21,7 +21,6 @@ export type InterfaceSurface = {
   title: string;
   role: string;
   paragraphs: string[];
-  placeholder: string;
 };
 
 export type TechGroup = { label: string; text: string };
@@ -105,6 +104,14 @@ export const floodFigures = {
     "Two mobile application prototype mockups in phone frames: a risk-check screen for assessing any district, and an emergency screen listing rescue contacts with call buttons and nearby emergency shelters.",
     "Prototype mockups: district risk check, and emergency contacts with shelters.",
     "Risk check · Emergency"
+  ),
+  publicPortal: fig(
+    "public-portal.webp",
+    1440,
+    900,
+    "The FloodSafe Pakistan public portal landing page: navigation for risk check, risk map, flood history, emergency, and safety guide; the emergency helpline banner; and system statistics. Available without login.",
+    "The public face of the system: risk information and safety guidance, no account needed.",
+    "FloodSafe Pakistan · Next.js"
   ),
 };
 
@@ -279,7 +286,6 @@ export const floodDss = {
         "The working surface of the system. District risk levels, mapped and tabulated; a threshold-based alert engine with issue and deactivate controls; coordination views for volunteers and field reports.",
         "It is built for the moment a warning has to become a decision: review the risk, issue the alert, coordinate the response.",
       ],
-      placeholder: "AUTHORITY DASHBOARD · INTERFACE CAPTURE TO BE ADDED",
     },
     {
       index: "02",
@@ -289,7 +295,6 @@ export const floodDss = {
         "The same risk information, translated for public users. District-level risk maps and charts, active alerts, and safety guidance, available without login.",
         "Built in Next.js. No account is needed to see the risk picture for a district.",
       ],
-      placeholder: "PUBLIC PORTAL · INTERFACE CAPTURE TO BE ADDED",
     },
     {
       index: "03",
@@ -299,7 +304,6 @@ export const floodDss = {
         "Risk information that travels. The mobile designs carry alerts and volunteer coordination into the field, where decisions happen away from a desk.",
         "The screens exist as prototype mockups, designed around the same backend and role-based access as the dashboard and portal.",
       ],
-      placeholder: "MOBILE APP · INTERFACE CAPTURE TO BE ADDED",
     },
   ] as InterfaceSurface[],
 

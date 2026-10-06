@@ -14,7 +14,7 @@ export const nutrition = {
   name: "Nutrition Tracking",
   fullName: "Personal Nutrition and Calorie Tracking System",
   statement:
-    "A web-based system for tracking what you eat: log meals, search a food database, or photograph a meal to identify it — with calories, protein, carbohydrates, and fats estimated per item, and progress shown on dashboards against personal goals.",
+    "The author's account describes a web-based system for tracking what you eat: log meals, search a food database, or photograph a meal to identify it — with calories, protein, carbohydrates, and fats estimated per item, and progress shown on dashboards against personal goals.",
 
   metadata: [
     { label: "Project type", value: "Independent project" },
@@ -33,7 +33,7 @@ export const nutrition = {
     title: "The tracking burden.",
     paragraphs: [
       "Keeping a record of what you eat — calories, protein, carbohydrates, and fats, for every meal, every day — is the kind of task that fails on effort alone. The recording is the work, and most of it happens at the table, in the moment.",
-      "The system described here was built to take on that burden: make recording a meal cheap enough to actually do. Log it by hand, find it in a food database, or photograph the plate and let the system identify what is on it.",
+      "According to the author's account, the system was built to take on that burden: make recording a meal cheap enough to actually do — log it by hand, find it in a food database, or photograph the plate and have the items identified.",
     ],
   },
 
@@ -65,19 +65,19 @@ export const nutrition = {
       {
         no: "02",
         title: "Identify",
-        body: "The system identifies the food items in the photo.",
+        body: "According to the author's account, the photo is used to identify the food items.",
       },
       {
         no: "03",
         title: "Estimate",
-        body: "Calories, protein, carbohydrates, and fats are estimated for the identified items and recorded against the day.",
+        body: "The account describes calories, protein, carbohydrates, and fats being estimated for the identified items and recorded against the day.",
       },
     ],
     note: "Which recognition step turns the photo into identified food items was not documented in the available account.",
   },
 
   features: {
-    title: "What the system does.",
+    title: "Described capabilities.",
     lede:
       "The feature list below is the author's account, presented as described — not as verified behavior of a reviewed system.",
     items: [

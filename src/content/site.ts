@@ -80,6 +80,7 @@ export type ResearchLine = {
   title: string;
   state: "built" | "direction";
   body: string;
+  href?: string;
 };
 
 export const research: ResearchLine[] = [
@@ -87,11 +88,13 @@ export const research: ResearchLine[] = [
     title: "Flood-risk prediction and early warning",
     state: "built",
     body: "The complete system built in 2026: spatial data engineering, trained models with held-out validation, and a working alert pipeline. It is the first full example of my research approach: turn data into tools that help people decide.",
+    href: "/work/flood-dss",
   },
   {
     title: "Urban heat and green cover, Karachi 2015–2025",
     state: "built",
     body: "A reproducible pipeline relating vegetation to land surface temperature from Landsat imagery, presented through an interactive dashboard. Environmental data, kept honest: every number traces back to its source.",
+    href: "/research/urban-heat",
   },
   {
     title: "Precise nutritional modelling",

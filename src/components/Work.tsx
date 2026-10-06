@@ -32,7 +32,7 @@ export default function Work() {
                 <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-soft">
                   {project.summary}
                 </p>
-                {project.href ? (
+                {project.href && (
                   <a
                     href={project.href}
                     className="group mt-5 inline-flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-accent"
@@ -45,10 +45,6 @@ export default function Work() {
                       →
                     </span>
                   </a>
-                ) : (
-                  <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.14em] text-muted">
-                    Project page · placeholder
-                  </p>
                 )}
               </div>
             </article>

@@ -33,6 +33,20 @@ export default function Research() {
                 <p className="mt-3 max-w-3xl text-[15px] leading-relaxed text-ink-soft">
                   {line.body}
                 </p>
+                {line.href && (
+                  <a
+                    href={line.href}
+                    className="group mt-4 inline-flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-accent"
+                  >
+                    Read the {line.href.startsWith("/research") ? "research page" : "case study"}
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    >
+                      →
+                    </span>
+                  </a>
+                )}
               </div>
             </li>
           </Reveal>
@@ -40,8 +54,8 @@ export default function Research() {
       </ol>
       <Reveal>
         <p className="mt-8 font-mono text-xs uppercase tracking-[0.14em] text-muted">
-          Placeholder: dedicated research pages with methods, data, and
-          results arrive in the next stage.
+          Two lines have dedicated pages, above. Precise nutritional modelling
+          remains a proposed direction — its page arrives with results.
         </p>
       </Reveal>
     </Section>

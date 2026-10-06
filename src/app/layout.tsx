@@ -28,6 +28,20 @@ export const metadata: Metadata = {
   title: "Aadil Ali Mahar · Portfolio",
   description:
     "Portfolio of Aadil Ali Mahar, computer science graduate from The Islamia University of Bahawalpur, working on data-driven systems for decisions that matter.",
+  openGraph: {
+    title: "Aadil Ali Mahar · Portfolio",
+    description:
+      "Computer science graduate working on data-driven systems for decisions that matter: flood-risk prediction, adaptive learning, urban heat, and nutrition tracking.",
+    url: "https://aadil-mahar-portfolio-v2.vercel.app",
+    siteName: "Aadil Ali Mahar · Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Aadil Ali Mahar · Portfolio",
+    description:
+      "Computer science graduate working on data-driven systems for decisions that matter.",
+  },
 };
 
 export default function RootLayout({
